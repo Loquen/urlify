@@ -203,6 +203,22 @@ input[type=text] {
     display: none;
   }
 
+  .navBar {
+    display: flex;
+    align-items: center;
+  }
+
+  .all-links>ul{
+    display: flex;
+    align-items: center;
+  }
+
+  .all-links {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
   .links {
     height: auto;
     display: flex;
