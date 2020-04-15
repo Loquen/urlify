@@ -30,9 +30,11 @@ function Url(props) {
   }
 
   return (
-    <div className='url-form'>
-      <input onChange={handleChange} type="text" placeholder={link}/>
-      <input onClick={handleSubmit} type="button" value="Shorten It!"/>
+    <div className="url">
+      <div className='url-form'>
+        <input onChange={handleChange} type="text" placeholder={link}/>
+        <input onClick={handleSubmit} type="button" value="Shorten It!"/>
+      </div>
     </div>
   );
 }

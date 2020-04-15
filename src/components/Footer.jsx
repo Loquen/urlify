@@ -30,7 +30,10 @@ function Footer(props) {
   ]
 
   return (
-    <div>
+    <div className="footer">
+      <div className="footer-logo">
+        <img src="logo.svg" alt="Shortly Logo"/>
+      </div>
       <FooterCard 
         key={1}
         data={cards[0]}

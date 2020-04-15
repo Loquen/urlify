@@ -1,45 +1,38 @@
 import React, { useState } from 'react';
+import { FaAlignRight } from 'react-icons/fa';
 
 function Nav(props) {
-  const [navMenu, setNavMenu] = useState(false);
-  const handleHamburgerClick = () => {
-    // if navMenu => close it
-    // else open it
-    setNavMenu(!navMenu);
-  }
+  const [toggle, setToggle] = useState(false);
 
-  const showStyle = {
-    display:'flex',
-    flexDirection: 'column',
-
-  }
-
-  const hideStyle = {
-    display:'none'
+  const toggleMenu = () => {
+    setToggle(!toggle);
   }
   
   return (
-    <div className='nav'>
+    
+      
+     
+      //   
+      // </div>
+
+    <div className="navBar">
       <div className="logo">
         <img src="logo.svg" alt="shortly logo"/>
       </div>
-      <div 
-        style={navMenu ? showStyle : hideStyle} 
-        className="nav-items">
-        <div className='nav-links'>
-          <div>Features</div>
-          <div>Pricing</div>
-          <div>Resources</div>
-        </div>
-        <div className="login">
-          <div>Login</div>
-          <input type="button" value="Sign Up"/>
-        </div>
-      </div>
-      <div className="hamburger">
-        <img onClick={handleHamburgerClick}src="icon-hamburger.svg" alt=""/>
+      <button onClick={toggleMenu}>
+        <FaAlignRight />
+      </button>
+      <ul className={toggle ? "nav-links show-nav" : "nav-links"}>
+        <li className="links" href="#">Features</li>
+        <li className="links" href="#">Pricing</li>
+        <li className="links" href="#">Resources</li>
+      </ul>
+      <div className="login">
+        <div>Login</div>
+        <input type="button" value="Sign Up"/>
       </div>
     </div>
+
   );
 }
 
