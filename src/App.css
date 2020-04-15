@@ -27,7 +27,6 @@ li {
 }
 
 .links {
-  height: 0;
   overflow: hidden;
   list-style-type: none;
   font-weight: bold;
@@ -35,6 +34,10 @@ li {
 
 .show-nav {
   height: 120px;
+}
+
+.hide-links {
+  display: none;
 }
 
 .start-img img{

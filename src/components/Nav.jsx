@@ -9,27 +9,21 @@ function Nav(props) {
   }
   
   return (
-    
-      
-     
-      //   
-      // </div>
-
     <div className="navBar">
-      <div className="logo">
-        <img src="logo.svg" alt="shortly logo"/>
-      </div>
+      <img src="logo.svg" alt="shortly logo"/>
       <button onClick={toggleMenu}>
         <FaAlignRight />
       </button>
-      <ul className={toggle ? "nav-links show-nav" : "nav-links"}>
-        <li className="links" href="#">Features</li>
-        <li className="links" href="#">Pricing</li>
-        <li className="links" href="#">Resources</li>
-      </ul>
-      <div className="login">
-        <div>Login</div>
-        <input type="button" value="Sign Up"/>
+      <div className="all-links">
+        <ul className={toggle ? "nav-links show-nav" : "nav-links"}>
+          <li className={toggle ? "links" : "hide-links links"} href="#">Features</li>
+          <li className={toggle ? "links" : "hide-links links"} href="#">Pricing</li>
+          <li className={toggle ? "links" : "hide-links links"} href="#">Resources</li>
+        </ul>
+        <ul className={toggle ? "nav-links show-nav" : "nav-links"}>
+          <li className={toggle ? "links" : "hide-links links"}>Login</li>
+          <li className={toggle ? "links" : "hide-links links"}><input type="button" value="Sign Up"/></li>
+        </ul>
       </div>
     </div>
 
